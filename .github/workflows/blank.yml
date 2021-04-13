@@ -27,9 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Go to the repository
-        run: cd /home/fyprobotics/Desktop/iw.hub
-      - name: Checkout and pull the latest requested branch
-        run:  git checkout ${GITHUB_REF##*/} && git pull
+        run: cd /home/fyprobotics/Desktop/iw.hub && git checkout ${GITHUB_REF##*/} && git pull
       - name : Run the Jenkins Pipeline
         run: cd /home/fyprobotics/Desktop/jenkinsRunner/runner/bin/ && jenkinsfile-runner -p jenkins_home/plugins -w jenkins -f ~/Desktop/iw.hub/jenkins
 
