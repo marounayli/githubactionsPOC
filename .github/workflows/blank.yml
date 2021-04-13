@@ -8,7 +8,7 @@ on:
   push:
     branches: [ master , feature/jenkins-pipleine ]
   pull_request:
-    branches: [ master , feature/jenkins-pipleine ]
+    branches: [ master ,feature/jenkins-pipleine ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
