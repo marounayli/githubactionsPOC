@@ -29,6 +29,6 @@ jobs:
       - name: Go to the repository
         run: cd /home/fyprobotics/Desktop/iw.hub && git checkout ${GITHUB_REF##*/} && git pull
       - name : Run the Jenkins Pipeline
-        run: cd /home/fyprobotics/Desktop/jenkinsRunner/runner/bin/ && echo $(pwd) && jenkinsfile-runner -p ./jenkins_home/plugins -w ./jenkins -f /home/fyprobotics/Desktop/iw.hub/jenkins
+        run: cd /home/fyprobotics/Desktop/jenkinsRunner && ./runner/bin/jenkinsfile-runner -p ./jenkins_home/plugins -w ./jenkins -f /home/fyprobotics/Desktop/iw.hub/jenkins
 
       # Runs a set of commands using the runners shell
