@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Go to the repository
-        run: cd /home/fyprobotics/Desktop/iw.hub && git checkout feature/jenkins-pipeline && git pull
+        run: cd /home/fyprobotics/Desktop/iw.hub && git checkout feature/jenkins-pipeline-linted && git pull
       - name: Copy the directory into a temporary one
         run: cp -R /home/fyprobotics/Desktop/iw.hub /home/fyprobotics/Desktop/iw.hub-temp
       - name: Run the Jenkins Pipeline
