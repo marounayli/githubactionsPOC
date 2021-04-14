@@ -28,7 +28,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Go to the repository
         run: cd /home/fyprobotics/Desktop/iw.hub && git checkout feature/jenkins-pipeline && git pull
-      - name : Run the Jenkins Pipeline
+      - name: Copy the directory into a temporary one
+        run: cp -R /home/fyprobotics/Desktop/iw.hub /home/fyprobotics/Desktop/iw.hub-temp
+      - name: Run the Jenkins Pipeline
         run: cd /home/fyprobotics/Desktop/jenkinsRunner && ./runner/bin/jenkinsfile-runner -p ./jenkins_home/plugins -w ./jenkins -f /home/fyprobotics/Desktop/iw.hub/jenkins
-
+      - name: Remove the temporary directory
+        run: rm -r /home/fyprobotics/Desktop/iw.hub-temp
       # Runs a set of commands using the runners shell
